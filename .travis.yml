@@ -25,6 +25,6 @@ after_success:
     - echo username=keyi                               >> ~/.pypirc
     - echo password=$PYPI_PASSWORD                     >> ~/.pypirc
     - docker cp ~/.pypirc manylinux:/home/
-    # - docker -exec -i manylinux bash -c 'cd cgra_pnr/thunder && twine upload --config-file /home/.pypirc dist/wheelhouse/*'
-    # - docker -exec -i manylinux bash -c 'cd cgra_pnr/cyclone && twine upload --config-file /home/.pypirc dist/wheelhouse/*'
+    - docker -exec -i manylinux bash -c 'cd cgra_pnr/thunder && twine upload --config-file /home/.pypirc dist/wheelhouse/*'
+    - docker -exec -i manylinux bash -c 'cd cgra_pnr/cyclone && twine upload --config-file /home/.pypirc dist/wheelhouse/*'
 
