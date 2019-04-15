@@ -18,7 +18,7 @@ RUN cd /tmp \
     && curl -L -o igraph.tar.gz "https://igraph.org/nightly/get/c/igraph-0.7.1.tar.gz" \
     && tar -xf igraph.tar.gz \
     && cd igraph-0.7.1 \
-    && ./configure \
+    && ./configure --enable-shared \
     && make -j4 \
     && make install \
     && cd /tmp \
